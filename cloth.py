@@ -96,3 +96,30 @@ def display_inventory():
         print(f"{key} : {values['count']}")
         total_sale += values['price'] * values['count']
     print(f"Total sales: {total_sale}")
+def main():
+    while True:
+        print("\nMenu:")
+        print("1. Add an item to the inventory.")
+        print("2. Buy an item from the inventory.")
+        print("3. Change the price of an existing item in the inventory.")
+        print("4. Update the inventory of an existing item.")
+        print("5. Display the inventory.")
+        print("6. Exit the program.")
+        choice = int(input("Enter your choice: "))
+        if choice == 1:
+            add_item()
+        elif choice == 2:
+            buy_item()
+        elif choice == 3:
+            change_price()
+        elif choice == 4:
+            update_inventory()
+        elif choice == 5:
+            display_inventory()
+        elif choice == 6:
+            print("Exiting the program.")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+main()
