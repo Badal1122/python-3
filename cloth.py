@@ -73,3 +73,11 @@ def buy_item():
     else:
         print("Item not available")
 
+def change_price():
+    name = input("Enter the name of the item: ")
+    price = int(input("Enter the new price of the item: "))
+    if name in inventory:
+        inventory[name]["price"] = price
+        print("Price updated successfully")
+    else:
+        print("Item not available")
