@@ -81,3 +81,11 @@ def change_price():
         print("Price updated successfully")
     else:
         print("Item not available")
+def update_inventory():
+    name = input("Enter the name of the item: ")
+    count = int(input("Enter the new count of the item: "))
+    if name in inventory:
+        inventory[name]["count"] = count
+        print("Count updated successfully")
+    else:
+        print("Item not available")
