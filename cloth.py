@@ -89,3 +89,10 @@ def update_inventory():
         print("Count updated successfully")
     else:
         print("Item not available")
+def display_inventory():
+    total_sale = 0
+    print("Inventory:")
+    for key, values in inventory.items():
+        print(f"{key} : {values['count']}")
+        total_sale += values['price'] * values['count']
+    print(f"Total sales: {total_sale}")
