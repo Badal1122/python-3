@@ -55,3 +55,9 @@ inventory = {
 }
 for key,value in inventory.items():
     print(f"{key}:{value}")
+def add_item():
+    name = input("Enter the name of the item: ")
+    price = int(input("Enter the price of the item: "))
+    count = int(input("Enter the count of the item: "))
+    inventory[name] = {"price": price, "count": count}
+    print(inventory)
